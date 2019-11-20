@@ -1,0 +1,396 @@
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+=box-sizing($box-sizing)
+  -moz-box-sizing: $box-sizing
+  -webkit-box-sizing: $box-sizing
+  box-sizing: $box-sizing
+
+=box-shadow($shadow)
+  -moz-box-shadow: $shadow
+  -webkit-box-shadow: $shadow
+  box-shadow: $shadow
+
+=transition($transition)
+  -moz-transition: $transition
+  -o-transition: $transition
+  -webkit-transition: $transition
+  transition: $transition
+
+=transform($transform)
+  -moz-transform: $transform
+  -ms-transform: $transform
+  -o-transform: $transform
+  -webkit-transform: $transform
+  transform: $transform
+
+=object-fit($object)
+  -o-object-fit: $object
+  object-fit: $object
+
+//  COLORS
+$textBlack: #231f20
+$darkBlue: #004488
+$blue: #179bd7
+$lightBlue: #d3f0ff
+$orange: #f15e22
+$white: #ffffff
+
+//  SIZES
+$fontSize: 18px
+$fontPhone: 24px
+$fontSpanPhone: 18px
+$mainH1: 50px
+$blockTitle: 50px
+$innerTitle: 36px
+$marginBottom: 100px
+$marginBottomTitle: 30px
+$littleMarginBottom: 5px
+$fullWidth: 100%
+
+//  FONTS
+$mainFont: Roboto, sans-serif
+$mediumFont: "Roboto - Medium", sans-serif
+$regularFont: "Roboto - Regular", sans-serif
+$blackFont: "Roboto - Black", sans-serif
+$boldFont: "Roboto - Bold", sans-serif
+
+//  MIXIN
+@mixin font($color: $textBlack, $family: $mainFont, $fontWeight: normal, $fontSize: $fontSize)
+  font:
+    size: $fontSize
+    weight: $fontWeight
+    family: $family
+  color: $color
+
+%zeroPosition
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+
+%input
+  background: $lightBlue
+  color: $darkBlue
+  width: 100%
+  border: none
+  padding: 15px 20px
+  &::placeholder
+    color: $blue
+
+//  STYLES
+/*
+  HEADER
+ */
+.header
+  &__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__nav
+    ul
+      display: flex
+
+    a
+      display: block
+      @include font($family: $mediumFont, $fontWeight: 500)
+      padding: 5px 15px
+
+  &__phone
+    @include font($darkBlue, $mainFont, bold, $fontPhone)
+
+    span
+      @include font($color: $blue, $fontSize: $fontSpanPhone)
+      line-height: $fontPhone
+
+.logo
+  max-width: 160px
+
+  a
+    display: inline-block
+
+.callback
+  a
+    @include font($fontWeight: bold, $color: $blue)
+    text-decoration: underline
+
+/*
+  MAIN PAGE
+ */
+.firstScreen__bg
+  margin-bottom: $marginBottom
+  background: $lightBlue
+
+.firstScreen
+  position: relative
+
+  &_left
+    width: 50%
+    padding: 80px 0
+
+    h1
+      @include font($blue, $boldFont, bold, $mainH1)
+      margin-bottom: 30px
+
+      span
+        @include font($darkBlue, $blackFont, bold, $mainH1)
+        text-transform: uppercase
+
+    p
+      @include font($blue, $regularFont, normal, 20px)
+      line-height: 1.2
+
+  img
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 2
+
+.s_services, .s_solutions, .s_why
+  margin-bottom: $marginBottom
+
+.s_services
+  z-index: 1
+  position: relative
+
+.services
+  padding-top: 30px
+
+.blockTitle
+  @include font($darkBlue, $mainFont, bold, $blockTitle)
+  line-height: 1.3
+
+.blockItems
+  display: flex
+  flex-wrap: wrap
+  z-index: 1
+  justify-content: space-between
+
+  &__item
+    width: 33%
+    position: relative
+    overflow: hidden
+    margin-bottom: $littleMarginBottom
+
+    img
+      width: 100%
+      +object-fit(cover)
+      position: relative
+      z-index: 1
+
+    &__bg
+      background-color: rgba(12, 36, 83, 0.75)
+      @extend %zeroPosition
+      z-index: 2
+      +transition(all 0.4s ease 0s)
+
+      &__title
+        @include font($white, $boldFont, bold, 24px)
+        position: absolute
+        bottom: 70px
+        left: 70px
+        right: 70px
+        z-index: 3
+        +transition(all 0.1s ease 0s)
+
+
+    &__arrow
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: 3
+      background: $orange
+      width: 70px
+      height: 70px
+      +transition(all 0.4s ease 0s)
+
+      img
+        width: 25px
+        height: 40px
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        margin: auto
+
+    &__hover
+      background-color: rgba(0, 92, 163, 0.7)
+      position: absolute
+      top: 100%
+      bottom: 0
+      right: 0
+      left: 0
+      z-index: 2
+      +transition(all 0.4s ease 0s)
+
+      &__content
+        z-index: 3
+        padding: 70px
+        opacity: 0
+        +transition(all 0.4s ease 0s)
+
+        &__arrow
+          position: absolute
+          top: 0
+          left: -70px
+          z-index: 3
+          background: $orange
+          width: 70px
+          height: 70px
+          +transition(all 0.4s ease 0s)
+
+          img
+            width: 25px
+            height: 40px
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            margin: auto
+
+        &__title
+          @include font($white, $boldFont, bold, 24px)
+          margin-bottom: 15px
+
+        &__text
+          @include font($white, $regularFont)
+          margin-bottom: 15px
+
+        &__link
+          @include font($orange, $blackFont, 900, $fontSize)
+          text-decoration: none
+          display: inline-block
+
+
+.blockItems__item:hover
+  .blockItems__item
+    &__bg
+      bottom: 100%
+      +transition(all 0.4s ease 0s)
+
+      &__title
+        opacity: 0
+        +transition(all 0.1s ease 0s)
+
+    &__hover
+      top: 0
+      +transition(all 0.4s ease 0s)
+
+      &__content
+        opacity: 1
+
+        &__arrow
+          left: 0
+          z-index: 3
+          +transition(all 0.4s ease 0.4s)
+
+    &__arrow
+      bottom: 100%
+      +transition(all 0.4s ease 0s)
+
+.solutions
+  &__container
+    display: flex
+  p
+    @include font()
+    margin-bottom: $marginBottomTitle
+
+  &_left
+    padding-right: 35px
+    width: 70%
+    a
+      margin-bottom: $marginBottomTitle
+
+    &__desc
+      background: $lightBlue
+      width: 122%
+      padding: 25px 20% 25px 25px
+      p
+        @include font($blue)
+        margin-bottom: 0
+
+  &_right
+    width: 30%
+    position: relative
+
+    img
+      position: absolute
+      bottom: -20px
+      right: 0
+
+.tags
+  margin-bottom: $marginBottom
+
+  ul
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    a
+      @include font($blue)
+      padding: 10px 15px
+      background: $lightBlue
+      text-decoration: none
+      display: inline-block
+      margin: 0 $littleMarginBottom $littleMarginBottom 0
+
+  .active a
+    background: $orange
+    color: $white
+
+.innerTitle
+  @include font($blue, $mainFont, bold, $innerTitle)
+  margin-bottom: $marginBottomTitle
+
+.btnOrange
+  @include font($orange, $boldFont, bold, $fontSize)
+  border: 2px solid $orange
+  padding: 10px 20px
+  display: inline-block
+
+.descItems
+  display: flex
+  flex-wrap: wrap
+  &__item
+    width: 48%
+    align-items: center
+    display: flex
+    &:nth-child(odd)
+      margin-right: 4%
+
+    &__img
+      width: 15%
+      margin-right: 5%
+    &__text
+      width: 80%
+      @include font()
+
+.feedbackForm
+  &_top
+    margin-bottom: 20px
+    ul
+      display: flex
+    li
+      width: 49%
+      &:first-child
+        margin-right: 2%
+      input
+        @extend %input
+
+  &_bottom
+    textarea
+      @extend %input
+      resize: none
+      height: 120px
+      width: 83%
+      margin-right: 2%
+
+/*
+  FOOTER
+ */
