@@ -12,7 +12,9 @@
     <link href="css/fonts.css" rel="stylesheet">
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <link href="css/min-reset.css" rel="stylesheet">
+    <link href="css/hamburger.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
 
     <link href="#" rel="shortcut icon">
     <meta content="petersburg-studio.com" name="author">
@@ -20,7 +22,7 @@
 <body>
 
 <header class="header">
-    <div class="wrapper">
+    <div class="wrapper wrapper_noPadding">
         <div class="header__container">
             <div class="logo">
                 <a href="/"><img alt="logo" src="images/icons/viaright-logo.svg"></a>
@@ -40,6 +42,28 @@
             <div class="callback">
                 <a href="#">Заказать звонок</a>
             </div>
+
+            <div class="header__hamburger">
+                <a class="adaptive-menu-toggle" href="#">
+								<span class="menu-toggle-inner">
+									<span class="menu-toggle-line menu-toggle-line--1"></span>
+									<span class="menu-toggle-line menu-toggle-line--2"></span>
+									<span class="menu-toggle-line menu-toggle-line--3"></span>
+									<span class="menu-toggle-line menu-toggle-line--4"></span>
+									<span class="menu-toggle-line menu-toggle-line--5"></span>
+								</span>
+                </a>
+            </div>
+
+            <nav class="headerNav_adaptive">
+                <ul class="headerNav__items_adaptive">
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Решения</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Пресс-центр</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
 </header>
@@ -47,13 +71,14 @@
 <section class="s_firstScreen">
     <div class="firstScreen__bg">
         <div class="wrapper">
-            <div class="firstScreen">
+            <div class="firstScreen parallaxBox">
                 <div class="firstScreen_left">
                     <h1>Решения<br/><span>SAP и OpenText</span></h1>
                     <p>Полный спектр услуг по внедрению и сопровождению корпоративных информационных систем</p>
                 </div>
-                <!--                TODO: change this-->
-                <img alt="cube" src="images/main/cube.png">
+                <img alt="cube" class="cubeParallax__first" src="images/main/cube1.png">
+                <img alt="cube" class="cubeParallax__second" src="images/main/cube2.png">
+                <img alt="cube" class="cubeParallax__third" src="images/main/cube3.png">
             </div>
         </div>
     </div>
@@ -432,13 +457,13 @@
                                 для вашего развития
                             </div>
                         </div>
-                        <div class="footer_bottom_left__contacts__item footer__phone">
+                        <div class="footer_bottom_left__contacts__item">
                             <i class="fas fa-phone-alt"></i><a href="#">+7 (812) 602-18-82</a>
                         </div>
-                        <div class="footer_bottom_left__contacts__item footer__address">
+                        <div class="footer_bottom_left__contacts__item">
                             <i class="fas fa-map-marker-alt"></i>191119, Санкт-Петербург, ул. Звенигородская, д.1, к.2
                         </div>
-                        <div class="footer_bottom_left__contacts__item footer__mail">
+                        <div class="footer_bottom_left__contacts__item">
                             <i class="fas fa-envelope"></i><a href="#">info@viaright.ru</a>
                         </div>
                     </div>
@@ -462,4 +487,11 @@
 </footer>
 
 </body>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/gsap.min.js"></script>
+<script src="js/hamburger.js"></script>
+<script src="js/main.js"></script>
+
+
 </html>

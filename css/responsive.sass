@@ -1,0 +1,255 @@
+@import "style"
+
+// SIZES
+$fontSize480: 16px
+$fontH1-1000: 35px
+$fontH1-480: 25px
+$innerTitle-1000: 25px
+$innerTitle-480: 20px
+$marginBottom767: 40px
+$marginBottom480: 20px
+
+@media only screen and (max-width: 1200px)
+  .blockItems__item__hover__content
+    padding: 70px 20px 20px 70px
+
+@media only screen and (max-width: 1000px)
+  .firstScreen
+    &_left
+      h1, h1 span
+        font-size: $fontH1-1000
+
+      p
+        font-size: 18px
+
+  .blockTitle
+    font-size: $fontH1-1000
+
+  .innerTitle
+    font-size: $innerTitle-1000
+
+  .blockItems
+    &__item
+      &__hover__content__title, &__bg__title
+        font-size: 20px
+
+      &__hover__content__text
+        max-height: 74px
+
+  .footer
+    &__logo
+      display: none
+
+    &_top
+      &__text, &__form
+        width: 50%
+
+      &__text
+        padding-right: 40px
+
+    &_bottom
+      &_left
+        &__contacts
+          width: 50%
+
+          &_top__text
+            font-size: 16px
+
+        &__contacts
+          flex-wrap: wrap
+
+
+@media only screen and (max-width: 900px)
+  .blockItems
+    &__item
+      width: 49.5%
+      max-height: none
+
+@media only screen and (max-width: 767px)
+  .s_firstScreen, .s_services, .s_solutions, .s_why, .s_feedbackForm
+    margin-bottom: $marginBottom767
+
+  .firstScreen
+    &_left
+      width: 100%
+      text-align: center
+      padding: 30px
+
+    &__bg
+      margin-bottom: 0
+
+    img
+      display: none
+
+  .services
+    padding-top: 0
+
+  .solutions
+    &_left
+      width: 100%
+      padding-right: 0
+
+      &__desc
+        width: 100%
+        padding: 25px
+
+    &_right
+      display: none
+
+  .descItems
+    &__item
+      width: 100%
+
+      &:nth-child(odd)
+        margin-right: 0
+
+  .feedbackForm_bottom
+    &__textarea
+      width: 75%
+
+    &__btn
+      width: 23%
+
+  .footer
+    &_top
+      &__container
+        flex-wrap: wrap
+
+      &__text, &__form
+        width: 100%
+
+      &__text
+        margin-bottom: 20px
+        padding: 0
+
+    &_bottom
+      &_left
+        &__contacts_top
+          flex-wrap: wrap
+
+          img
+            margin-bottom: 20px
+
+@media only screen and (max-width: 640px)
+
+
+@media only screen and (max-width: 480px)
+  .wrapper_noPadding
+    padding: 0
+
+  .header__container
+    flex-wrap: wrap
+    padding-bottom: 10px
+
+  .logo
+    width: 100%
+    margin-bottom: 5px
+
+  .header
+    &__nav
+      display: none
+    &__phone, .callback
+      margin: 0 auto 5px
+
+
+
+  .s_firstScreen, .s_services, .s_solutions, .s_why, .s_feedbackForm, .tags
+    margin-bottom: $marginBottom480
+
+  .firstScreen
+    &_left
+      padding: 20px 0
+
+      h1
+        font-size: $fontH1-480
+        margin-bottom: 15px
+
+        span
+          font-size: $fontH1-480
+
+      p
+        font-size: $fontSize480
+
+  .blockTitle
+    font-size: $fontH1-480
+  .innerTitle
+    font-size: $innerTitle-480
+
+  .blockItems
+    &__item
+      width: 100%
+
+      &__bg, &__arrow
+        display: none
+
+      &__hover
+        top: 0
+
+        &__content
+          padding: 20px
+          opacity: 1
+
+          &__arrow
+            display: none
+
+  .tags__item a
+    font-size: $fontSize480
+
+  .feedbackForm
+    &_top
+      margin-bottom: 10px
+
+      ul
+        flex-wrap: wrap
+
+      li
+        width: 100%
+
+        &:first-child
+          margin: 0 0 10px 0
+
+    &_bottom
+      ul
+        flex-wrap: wrap
+
+      &__textarea
+        width: 100%
+        margin: 0 0 10px 0
+
+      &__btn
+        width: 100%
+
+        button
+          height: 40px
+
+          img
+            display: none
+
+      &__checkbox label, &__checkbox label a
+        font-size: $fontSize480
+
+  .footer
+    &_top
+      &__text
+        font-size: $fontSize480
+        text-align: center
+      &__form
+        ul
+          flex-wrap: wrap
+        li:first-child, li:last-child
+          width: 100%
+          margin: 0 0 10px 0
+    &_bottom
+      padding-bottom: 10px
+      &_left
+        display: block
+        &__contacts
+          width: 100%
+          padding-right: 0
+          border-right: none
+          border-bottom: 1px solid $white
+          margin-bottom: 20px
+        &__nav
+          margin: 0 0 20px
+      &_right
+        position: static

@@ -110,6 +110,8 @@ $boldFont: "Roboto - Bold", sans-serif
     span
       @include font($color: $blue, $fontSize: $fontSpanPhone)
       line-height: $fontPhone
+  &__hamburger
+    display: none
 
 .logo
   max-width: 160px
@@ -121,6 +123,9 @@ $boldFont: "Roboto - Bold", sans-serif
   a
     @include font($fontWeight: bold, $color: $blue)
     text-decoration: underline
+
+.headerNav_adaptive
+  display: none
 
 /*
   MAIN PAGE
@@ -148,11 +153,31 @@ $boldFont: "Roboto - Bold", sans-serif
       @include font($blue, $regularFont, normal, 20px)
       line-height: 1.2
 
-  img
+
+.cubeParallax
+  &__first
     position: absolute
     top: 0
     right: 0
     z-index: 2
+    width: 513px
+    height: 531px
+
+  &__second
+    position: absolute
+    top: 71px
+    right: 88px
+    z-index: 2
+    width: 336px
+    height: 389px
+
+  &__third
+    position: absolute
+    top: 85px
+    right: 74px
+    z-index: 2
+    width: 366px
+    height: 362px
 
 .s_services, .s_solutions, .s_why, .s_feedbackForm
   margin-bottom: $marginBottom
@@ -197,7 +222,7 @@ $boldFont: "Roboto - Bold", sans-serif
         position: absolute
         bottom: 70px
         left: 70px
-        right: 70px
+        right: 20px
         z-index: 3
         +transition(all 0.1s ease 0s)
 
@@ -265,6 +290,8 @@ $boldFont: "Roboto - Bold", sans-serif
         &__text
           @include font($white, $regularFont)
           margin-bottom: 15px
+          max-height: 92px
+          overflow: hidden
 
         &__link
           @include font($orange, $blackFont, 900, $fontSize)
@@ -369,6 +396,7 @@ $boldFont: "Roboto - Bold", sans-serif
     width: 48%
     align-items: center
     display: flex
+    margin-bottom: 20px
 
     &:nth-child(odd)
       margin-right: 4%
@@ -478,11 +506,11 @@ $boldFont: "Roboto - Bold", sans-serif
         display: flex
 
       li:first-child
-        width: 68%
+        width: 58%
         margin-right: 2%
 
       li:last-child
-        width: 30%
+        width: 40%
 
       input
         @extend %input
