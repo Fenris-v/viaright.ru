@@ -479,7 +479,7 @@
 
 /* FOOTER
  * */
-.footer__wrapper {
+.footer__wrapper .wrapper {
   position: relative;
 }
 .footer__logo {
