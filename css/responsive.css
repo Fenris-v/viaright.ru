@@ -41,6 +41,11 @@
   color: #231f20;
   padding: 5px 15px;
 }
+.header__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .header__phone {
   font-size: 24px;
   font-weight: bold;
@@ -65,6 +70,9 @@
   display: inline-block;
 }
 
+.callback {
+  margin-left: 20px;
+}
 .callback a {
   font-size: 18px;
   font-weight: bold;
@@ -119,23 +127,26 @@
   right: 0;
   z-index: 2;
   width: 513px;
-  height: 531px;
+  max-width: 45%;
+  object-fit: contain;
 }
 .cubeParallax__second {
   position: absolute;
-  top: 71px;
-  right: 88px;
+  top: 5%;
+  right: 7%;
   z-index: 2;
   width: 336px;
-  height: 389px;
+  max-width: 30%;
+  object-fit: contain;
 }
 .cubeParallax__third {
   position: absolute;
-  top: 85px;
-  right: 74px;
+  top: 10%;
+  right: 5%;
   z-index: 2;
   width: 366px;
-  height: 362px;
+  max-width: 33%;
+  object-fit: contain;
 }
 
 .s_services, .s_solutions, .s_why, .s_feedbackForm {
@@ -634,11 +645,36 @@
 }
 
 @media only screen and (max-width: 1200px) {
+  .header__contacts {
+    display: block;
+  }
+
+  .callback {
+    margin: 0;
+    text-align: center;
+  }
+
   .blockItems__item__hover__content {
     padding: 70px 20px 20px 70px;
   }
 }
 @media only screen and (max-width: 1000px) {
+  .wrapper_noPadding {
+    padding: 0;
+  }
+
+  .header__nav {
+    display: none;
+  }
+  .header__contacts {
+    margin-right: 100px;
+    display: flex;
+  }
+
+  .callback {
+    margin-left: 20px;
+  }
+
   .firstScreen_left h1, .firstScreen_left h1 span {
     font-size: 35px;
   }
@@ -687,6 +723,14 @@
   }
 }
 @media only screen and (max-width: 767px) {
+  .header__contacts {
+    display: block;
+  }
+
+  .callback {
+    margin: 0;
+  }
+
   .s_firstScreen, .s_services, .s_solutions, .s_why, .s_feedbackForm {
     margin-bottom: 40px;
   }
@@ -750,13 +794,14 @@
     margin-bottom: 20px;
   }
 }
-@media only screen and (max-width: 480px) {
-  .wrapper_noPadding {
-    padding: 0;
+@media only screen and (max-width: 640px) {
+  .header__contacts {
+    margin-right: 50px;
   }
-
+}
+@media only screen and (max-width: 480px) {
   .header__container {
-    flex-wrap: wrap;
+    display: block;
     padding-bottom: 10px;
   }
 
@@ -765,11 +810,12 @@
     margin-bottom: 5px;
   }
 
-  .header__nav {
-    display: none;
+  .header__contacts {
+    margin: 0 auto;
   }
   .header__phone, .header .callback {
     margin: 0 auto 5px;
+    text-align: center;
   }
 
   .s_firstScreen, .s_services, .s_solutions, .s_why, .s_feedbackForm, .tags {

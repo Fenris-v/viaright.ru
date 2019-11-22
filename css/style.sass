@@ -104,12 +104,18 @@ $boldFont: "Roboto - Bold", sans-serif
       @include font($family: $mediumFont, $fontWeight: 500)
       padding: 5px 15px
 
+  &__contacts
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+
   &__phone
     @include font($darkBlue, $mainFont, bold, $fontPhone)
 
     span
       @include font($color: $blue, $fontSize: $fontSpanPhone)
       line-height: $fontPhone
+
   &__hamburger
     display: none
 
@@ -120,6 +126,8 @@ $boldFont: "Roboto - Bold", sans-serif
     display: inline-block
 
 .callback
+  margin-left: 20px
+
   a
     @include font($fontWeight: bold, $color: $blue)
     text-decoration: underline
@@ -161,23 +169,27 @@ $boldFont: "Roboto - Bold", sans-serif
     right: 0
     z-index: 2
     width: 513px
-    height: 531px
+    max-width: 45%
+    object-fit: contain
+
 
   &__second
     position: absolute
-    top: 71px
-    right: 88px
+    top: 5%
+    right: 7%
     z-index: 2
     width: 336px
-    height: 389px
+    max-width: 30%
+    object-fit: contain
 
   &__third
     position: absolute
-    top: 85px
-    right: 74px
+    top: 10%
+    right: 5%
     z-index: 2
     width: 366px
-    height: 362px
+    max-width: 33%
+    object-fit: contain
 
 .s_services, .s_solutions, .s_why, .s_feedbackForm
   margin-bottom: $marginBottom

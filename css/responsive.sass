@@ -10,10 +10,31 @@ $marginBottom767: 40px
 $marginBottom480: 20px
 
 @media only screen and (max-width: 1200px)
+  .header
+    &__contacts
+      display: block
+
+  .callback
+    margin: 0
+    text-align: center
+
   .blockItems__item__hover__content
     padding: 70px 20px 20px 70px
 
 @media only screen and (max-width: 1000px)
+  .wrapper_noPadding
+    padding: 0
+
+  .header
+    &__nav
+      display: none
+
+    &__contacts
+      margin-right: 100px
+      display: flex
+  .callback
+    margin-left: 20px
+
   .firstScreen
     &_left
       h1, h1 span
@@ -66,6 +87,12 @@ $marginBottom480: 20px
       max-height: none
 
 @media only screen and (max-width: 767px)
+  .header
+    &__contacts
+      display: block
+  .callback
+    margin: 0
+
   .s_firstScreen, .s_services, .s_solutions, .s_why, .s_feedbackForm
     margin-bottom: $marginBottom767
 
@@ -131,14 +158,15 @@ $marginBottom480: 20px
             margin-bottom: 20px
 
 @media only screen and (max-width: 640px)
+  .header
+    &__contacts
+      margin-right: 50px
 
 
 @media only screen and (max-width: 480px)
-  .wrapper_noPadding
-    padding: 0
 
   .header__container
-    flex-wrap: wrap
+    display: block
     padding-bottom: 10px
 
   .logo
@@ -146,11 +174,12 @@ $marginBottom480: 20px
     margin-bottom: 5px
 
   .header
-    &__nav
-      display: none
+    &__contacts
+      margin: 0 auto
+
     &__phone, .callback
       margin: 0 auto 5px
-
+      text-align: center
 
 
   .s_firstScreen, .s_services, .s_solutions, .s_why, .s_feedbackForm, .tags
@@ -233,23 +262,30 @@ $marginBottom480: 20px
       &__text
         font-size: $fontSize480
         text-align: center
+
       &__form
         ul
           flex-wrap: wrap
+
         li:first-child, li:last-child
           width: 100%
           margin: 0 0 10px 0
+
     &_bottom
       padding-bottom: 10px
+
       &_left
         display: block
+
         &__contacts
           width: 100%
           padding-right: 0
           border-right: none
           border-bottom: 1px solid $white
           margin-bottom: 20px
+
         &__nav
           margin: 0 0 20px
+
       &_right
         position: static
