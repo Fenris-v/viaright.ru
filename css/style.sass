@@ -1,61 +1,6 @@
 @import "prefixes"
+@import "variables"
 
-//  COLORS
-$textBlack: #231f20
-$darkBlue: #004488
-$blue: #179bd7
-$lightBlue: #d3f0ff
-$orange: #f15e22
-$white: #ffffff
-
-//  SIZES
-$fontSize: 18px
-$smallFontSize: 16px
-$fontPhone: 24px
-$fontSpanPhone: 18px
-$mainH1: 50px
-$blockTitle: 50px
-$innerTitle: 36px
-$marginBottom: 100px
-$marginBottomTitle: 30px
-$littleMarginBottom: 5px
-$marginBottomForm: 20px
-$fullWidth: 100%
-$textareaSize: 120px
-
-//  FONTS
-$mainFont: "Roboto", sans-serif
-$mediumFont: "Roboto - Medium", sans-serif
-$regularFont: "Roboto - Regular", sans-serif
-$blackFont: "Roboto - Black", sans-serif
-$boldFont: "Roboto - Bold", sans-serif
-
-//  MIXIN
-@mixin font($color: $textBlack, $family: $mainFont, $fontWeight: normal, $fontSize: $fontSize)
-  font:
-    size: $fontSize
-    weight: $fontWeight
-    family: $family
-  color: $color
-
-%zeroPosition
-  position: absolute
-  top: 0
-  bottom: 0
-  right: 0
-  left: 0
-
-%input
-  @include font($darkBlue)
-  width: 100%
-  border: none
-  padding: 15px 20px
-
-  &::placeholder
-    color: $blue
-    @include font($blue)
-
-//  STYLES
 /*
   HEADER
  */
@@ -161,7 +106,7 @@ $boldFont: "Roboto - Bold", sans-serif
     max-width: 33%
     object-fit: contain
 
-.s_services, .s_solutions, .s_why, .s_feedbackForm
+.s_services, .s_solutions, .s_why, .s_feedbackForm, .s_properties, .s_implementation, .s_module
   margin-bottom: $marginBottom
 
 .s_services
@@ -174,6 +119,9 @@ $boldFont: "Roboto - Bold", sans-serif
 .blockTitle
   @include font($darkBlue, $mainFont, bold, $blockTitle)
   line-height: 1.3
+
+  span
+    @include font($blue, $mainFont, bold, 36px)
 
 .blockItems
   display: flex
@@ -598,3 +546,175 @@ $boldFont: "Roboto - Bold", sans-serif
       bottom: 0
       text-align: right
       @include font($lightBlue)
+
+/*
+  FINANCE
+  */
+.staticCube
+  position: absolute
+  top: 0
+  right: 0
+
+.breadcrumbs
+  margin-bottom: 20px
+
+  ul
+    display: flex
+    margin: 0
+
+  &__item
+    a
+      @include font($grey, $mainFont, normal, $smallFontSize)
+    @include font($grey, $mainFont, normal, $smallFontSize)
+    margin-left: 20px
+    padding: 5px 10px
+    position: relative
+
+    &:first-child
+      margin-left: 0
+      padding-left: 0
+
+      &:before
+        content: none
+
+    &:before
+      content: "/"
+      left: -15px
+      position: absolute
+
+.firstScreen__bg_finance
+  margin: 0
+
+.s_firstScreen_finance
+  p
+    @include font($darkBlue, $boldFont, bold, $fontSize)
+
+  img
+    max-width: 34%
+
+.firstScreen_left_finance
+  width: 65%
+  padding: 60px 0
+
+  h1
+    font-size: 30px
+    line-height: 60px
+    margin-bottom: 10px
+    text-transform: none
+
+    span
+      font-size: 40px
+      text-transform: none
+
+.properties
+  width: 70%
+  display: flex
+  padding: 30px 0
+
+  &__item
+    display: flex
+    margin-right: 20px
+
+    &:last-child
+      margin-right: 0
+
+    img
+      max-width: 50px
+
+    p
+      @include font($darkBlue, $mainFont, normal, $smallFontSize)
+      padding-left: 10px
+
+.implementation__title
+  @include font($darkBlue, $mainFont, bold, $mainH1)
+  line-height: 60px
+  margin-bottom: 20px
+
+  span
+    @include font($blue, $mainFont, bold, 36px)
+
+.listWithCheck
+  margin-bottom: 20px
+
+  li
+    vertical-align: middle
+    margin-bottom: 10px
+
+    &:before
+      content: url("../images/icons/finance/check.png")
+      vertical-align: middle
+      margin-right: 20px
+
+.implementation
+  &__items
+    display: flex
+
+  &__item
+    padding: 30px
+    position: relative
+    width: 25%
+    border: 2px solid $darkBlue
+    border-right: none
+    text-align: center
+    overflow: hidden
+
+    &:last-child
+      border-right: 2px solid $darkBlue
+
+    &_noHover
+      background: transparent
+
+      &__title
+        @include font($darkBlue, $mainFont, bold)
+        max-height: 54px
+        overflow: hidden
+
+    &_hover
+      padding: 30px 20px
+      background: $darkBlue
+      position: absolute
+      top: 100%
+      bottom: 0
+      left: 0
+      right: 0
+      +transition(all 0.4s ease 0s)
+
+      &__title
+        @include font($white, $mainFont, bold)
+        margin-bottom: 20px
+        max-height: 54px
+        overflow: hidden
+
+      p
+        @include font($white, $mainFont, normal, $smallFontSize)
+        line-height: 1.2
+        max-height: 76px
+        overflow: hidden
+
+    &:hover .implementation__item_hover
+      top: 0
+      +transition(all 0.4s ease 0s)
+
+.module
+  &__desc
+    background: $lightBlue
+    padding: 20px 30px
+    margin-bottom: 50px
+
+    p
+      @include font($blue)
+
+  &_bottom
+    display: flex
+    justify-content: space-between
+
+    &_half
+      width: 48%
+
+      p
+        @include font()
+        margin-bottom: 20px
+
+      &__title
+        @include font($blue, $mainFont, bold)
+

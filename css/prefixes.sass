@@ -1,3 +1,5 @@
+@import "variables"
+
 =border-radius($radius)
   -webkit-border-radius: $radius
   -moz-border-radius: $radius
@@ -29,3 +31,28 @@
 =object-fit($object)
   -o-object-fit: $object
   object-fit: $object
+
+//  MIXIN
+@mixin font($color: $textBlack, $family: $mainFont, $fontWeight: normal, $fontSize: $fontSize)
+  font:
+    size: $fontSize
+    weight: $fontWeight
+    family: $family
+  color: $color
+
+%zeroPosition
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+
+%input
+  @include font($darkBlue)
+  width: 100%
+  border: none
+  padding: 15px 20px
+
+  &::placeholder
+    color: $blue
+    @include font($blue)
