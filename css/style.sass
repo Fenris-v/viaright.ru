@@ -119,6 +119,10 @@
 .blockTitle
   @include font($darkBlue, $mainFont, bold, $blockTitle)
   line-height: 1.3
+  margin-bottom: 20px
+
+  &_noMargin
+    margin-bottom: 0
 
   span
     @include font($blue, $mainFont, bold, 36px)
@@ -145,7 +149,7 @@
       background-color: rgba(12, 36, 83, 0.75)
       @extend %zeroPosition
       z-index: 2
-      +transition(all 0.4s ease 0s)
+      +transition(all 0.4s ease 0.4s)
 
       &__title
         @include font($white, $boldFont, bold, 24px)
@@ -154,7 +158,7 @@
         left: 70px
         right: 20px
         z-index: 3
-        +transition(all 0.1s ease 0s)
+        +transition(all 0.1s ease 0.4s)
 
 
     &__arrow
@@ -165,7 +169,7 @@
       background: $orange
       width: 70px
       height: 70px
-      +transition(all 0.4s ease 0s)
+      +transition(all 0.4s ease 0.4s)
 
       img
         width: 25px
@@ -185,7 +189,7 @@
       right: 0
       left: 0
       z-index: 2
-      +transition(all 0.4s ease 0s)
+      +transition(all 0.4s ease 0.4s)
 
       &__content
         z-index: 3
@@ -201,6 +205,7 @@
           background: $orange
           width: 70px
           height: 70px
+          //TODO
           +transition(all 0.4s ease 0s)
 
           img
@@ -609,7 +614,7 @@
 
 .properties
   display: flex
-  padding: 30px 0
+  padding-top: 30px
 
   &__item
     display: block
@@ -721,15 +726,16 @@
 /**
   CONTROL PAGE
   */
-
 .accordion
   &__item
     &:last-child
       .accordion__desc
         border-top: none
         border-bottom: 1px solid $blue
+
       .accordion__title
         border-bottom: 1px solid $blue
+
   &__title
     @include font($darkBlue, $mainFont, bold)
     border: 1px solid $blue
@@ -743,10 +749,17 @@
     text-decoration: none
     +transition(all 0.4s ease 0s)
 
+    &.active:after
+      transform: rotate(180deg)
+      +transition(all 0.4s ease 0s)
+
+
     &:after
       content: url(../images/icons/arrow-down.png)
       position: absolute
       right: 30px
+      +transition(all 0.4s ease 0s)
+
   &__desc
     display: none
     font-size: 0
