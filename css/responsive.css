@@ -149,7 +149,7 @@
   object-fit: contain;
 }
 
-.s_services, .s_solutions, .s_why, .s_feedbackForm, .s_properties, .s_implementation, .s_module {
+.s_services, .s_solutions, .s_why, .s_feedbackForm, .s_properties, .s_implementation, .s_module, .s_firstScreen_inner {
   margin-bottom: 100px;
 }
 
@@ -728,17 +728,17 @@
   position: absolute;
 }
 
-.firstScreen__bg_finance {
+.firstScreen__bg_inner {
   margin: 0;
 }
 
-.s_firstScreen_finance p {
+.s_firstScreen_inner p {
   font-size: 18px;
   font-weight: bold;
   font-family: "Roboto - Bold", sans-serif;
   color: #004488;
 }
-.s_firstScreen_finance img {
+.s_firstScreen_inner img {
   max-width: 34%;
 }
 
@@ -748,36 +748,36 @@
 }
 .firstScreen_left_finance h1 {
   font-size: 30px;
-  line-height: 60px;
+  line-height: 1;
   margin-bottom: 10px;
   text-transform: none;
 }
 .firstScreen_left_finance h1 span {
   font-size: 40px;
   text-transform: none;
+  line-height: 1.5;
 }
 
 .properties {
-  width: 70%;
   display: flex;
   padding: 30px 0;
 }
 .properties__item {
-  display: flex;
+  display: block;
   margin-right: 20px;
 }
 .properties__item:last-child {
   margin-right: 0;
 }
 .properties__item img {
-  max-width: 50px;
+  max-width: 80px;
+  margin-bottom: 10px;
 }
 .properties__item p {
   font-size: 16px;
   font-weight: normal;
   font-family: "Roboto", sans-serif;
   color: #004488;
-  padding-left: 10px;
 }
 
 .implementation__title {
@@ -903,6 +903,53 @@
   font-weight: bold;
   font-family: "Roboto", sans-serif;
   color: #179bd7;
+}
+
+/**
+ * CONTROL PAGE
+ * */
+.accordion__item:last-child .accordion__desc {
+  border-top: none;
+  border-bottom: 1px solid #179bd7;
+}
+.accordion__item:last-child .accordion__title {
+  border-bottom: 1px solid #179bd7;
+}
+.accordion__title {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  color: #004488;
+  border: 1px solid #179bd7;
+  border-bottom: none;
+  display: block;
+  height: 50px;
+  background: #d3f0ff;
+  line-height: 50px;
+  padding: 0 20px;
+  position: relative;
+  text-decoration: none;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.accordion__title:after {
+  content: url(../images/icons/arrow-down.png);
+  position: absolute;
+  right: 30px;
+}
+.accordion__desc {
+  display: none;
+  font-size: 0;
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid #179bd7;
+  border-bottom: none;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+  color: #231f20;
 }
 
 .blockItems__item__bg {

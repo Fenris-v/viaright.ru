@@ -22,4 +22,23 @@ $(document).ready(function () {
         }
     });
 
+    /**
+     * ACCORDION
+     */
+    var items = $('.accordion__desc');
+    var title = $('.accordion__title');
+
+    title.on("click", function () {
+        items.stop(true, true);
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            items.slideUp();
+        } else {
+            title.removeClass('active');
+            items.slideUp();
+            $(this).addClass('active')
+                .next().slideToggle();
+        }
+        return false;
+    });
 });
