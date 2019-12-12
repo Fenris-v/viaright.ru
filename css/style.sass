@@ -335,17 +335,34 @@
     flex-wrap: wrap
 
   &__item
-    a
-      @include font($blue)
-      padding: 10px 15px
-      background: $lightBlue
-      text-decoration: none
-      display: inline-block
-      margin: 0 $littleMarginBottom $littleMarginBottom 0
+    @include font($blue)
+    padding: 10px 15px
+    background: $lightBlue
+    text-decoration: none
+    display: inline-block
+    margin: 0 $littleMarginBottom $littleMarginBottom 0
+    cursor: pointer
+    //a
+    //  @include font($blue)
+    //  padding: 10px 15px
+    //  background: $lightBlue
+    //  text-decoration: none
+    //  display: inline-block
+    //  margin: 0 $littleMarginBottom $littleMarginBottom 0
 
-  .active a
+  &__content
+    //display: none
+    //height:
+
+    &_active
+      display: block
+
+  .active
     background: $orange
     color: $white
+  //.active a
+  //  background: $orange
+  //  color: $white
 
 .innerTitle
   @include font($blue, $mainFont, bold, $innerTitle)

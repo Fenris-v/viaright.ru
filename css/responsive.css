@@ -436,7 +436,7 @@
   display: flex;
   flex-wrap: wrap;
 }
-.tags__item a {
+.tags__item {
   font-size: 18px;
   font-weight: normal;
   font-family: "Roboto", sans-serif;
@@ -446,8 +446,12 @@
   text-decoration: none;
   display: inline-block;
   margin: 0 5px 5px 0;
+  cursor: pointer;
 }
-.tags .active a {
+.tags__content_active {
+  display: block;
+}
+.tags .active {
   background: #f15e22;
   color: #ffffff;
 }
