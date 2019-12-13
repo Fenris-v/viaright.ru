@@ -11,6 +11,7 @@
 
     <link href="css/fonts.css" rel="stylesheet">
     <link href="fontawesome/css/all.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
     <link href="css/min-reset.css" rel="stylesheet">
     <link href="css/hamburger.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -38,10 +39,10 @@
             </nav>
             <div class="header__contacts">
                 <div class="header__phone">
-                    <span>+7 (812)</span> 602-18-82
+                    <a href="#"><span>+7 (812)</span> 602-18-82</a>
                 </div>
                 <div class="callback">
-                    <a href="#">Заказать звонок</a>
+                    <a href="#callback-modal" data-fancybox-modal>Заказать звонок</a>
                 </div>
             </div>
             <div class="header__hamburger">
@@ -276,129 +277,141 @@
                     <li class="tags__item">Гибкое управление недвижимостью</li>
                     <li class="tags__item">Учет материалов</li>
                     <li class="tags__item">Техническое обслуживание и ремонт оборудования</li>
-<!--                    <li class="tags__item active"><a href="#">Контроллинг</a></li>-->
-<!--                    <li class="tags__item"><a href="#">Финансы</a></li>-->
-<!--                    <li class="tags__item"><a href="#">Учет основных средств</a></li>-->
-<!--                    <li class="tags__item"><a href="#">Система управления документами</a></li>-->
-<!--                    <li class="tags__item"><a href="#">Business Objects</a></li>-->
-<!--                    <li class="tags__item"><a href="#">Мобильное ТОРО</a></li>-->
-<!--                    <li class="tags__item"><a href="#">Сбыт</a></li>-->
-<!--                    <li class="tags__item"><a href="#">Гибкое управление недвижимостью</a></li>-->
-<!--                    <li class="tags__item"><a href="#">Учет материалов</a></li>-->
-<!--                    <li class="tags__item"><a href="#">Техническое обслуживание и ремонт оборудования</a></li>-->
                 </ul>
             </div>
             <div class="solutions__container">
                 <div class="solutions_left">
-                    <div class="tags__content tags__content_active">
-                        <div class="innerTitle">
-                            Модуль FI «Финансы»
+                    <div class="tags__wrapper">
+                        <div class="tags__content tags__content_active">
+                            <div class="innerTitle">
+                                Модуль FI «Финансы»
+                            </div>
+                            <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг
+                                и
+                                Финансовый менеджмент играет ключевую роль для управления всеми подразделениями,
+                                обеспечивая
+                                связь с логистической цепочкой, все это делает возможным оптимизацию внутренних
+                                процессов в
+                                Компании.</p>
+                            <a class="btnOrange" href="#">подробнее</a>
                         </div>
-                        <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг и
-                            Финансовый менеджмент играет ключевую роль для управления всеми подразделениями, обеспечивая
-                            связь с логистической цепочкой, все это делает возможным оптимизацию внутренних процессов в
-                            Компании.</p>
-                        <a class="btnOrange" href="#">подробнее</a>
-                    </div>
-                    <div class="tags__content">
-                        <div class="innerTitle">
-                            Модуль FI «Финансы»
+                        <div class="tags__content">
+                            <div class="innerTitle">
+                                Модуль FI «Финансы»
+                            </div>
+                            <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг
+                                и
+                                Финансовый менеджмент играет ключевую роль для управления всеми подразделениями,
+                                обеспечивая
+                                связь с логистической цепочкой, все это делает возможным оптимизацию внутренних
+                                процессов в
+                                Компании.</p>
+                            <a class="btnOrange" href="#">подробнее</a>
                         </div>
-                        <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг и
-                            Финансовый менеджмент играет ключевую роль для управления всеми подразделениями, обеспечивая
-                            связь с логистической цепочкой, все это делает возможным оптимизацию внутренних процессов в
-                            Компании.</p>
-                        <a class="btnOrange" href="#">подробнее</a>
-                    </div>
-                    <div class="tags__content">
-                        <div class="innerTitle">
-                            Модуль FI «Финансы»
+                        <div class="tags__content">
+                            <div class="innerTitle">
+                                Модуль FI «Финансы»
+                            </div>
+                            <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг
+                                и
+                                Финансовый менеджмент играет ключевую роль для управления всеми подразделениями,
+                                обеспечивая
+                                связь с логистической цепочкой, все это делает возможным оптимизацию внутренних
+                                процессов в
+                                Компании.</p>
+                            <a class="btnOrange" href="#">подробнее</a>
                         </div>
-                        <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг и
-                            Финансовый менеджмент играет ключевую роль для управления всеми подразделениями, обеспечивая
-                            связь с логистической цепочкой, все это делает возможным оптимизацию внутренних процессов в
-                            Компании.</p>
-                        <a class="btnOrange" href="#">подробнее</a>
-                    </div>
-                    <div class="tags__content">
-                        <div class="innerTitle">
-                            Модуль FI «Финансы»
+                        <div class="tags__content">
+                            <div class="innerTitle">
+                                Модуль FI «Финансы»
+                            </div>
+                            <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг
+                                и
+                                Финансовый менеджмент играет ключевую роль для управления всеми подразделениями,
+                                обеспечивая
+                                связь с логистической цепочкой, все это делает возможным оптимизацию внутренних
+                                процессов в
+                                Компании.</p>
+                            <a class="btnOrange" href="#">подробнее</a>
                         </div>
-                        <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг и
-                            Финансовый менеджмент играет ключевую роль для управления всеми подразделениями, обеспечивая
-                            связь с логистической цепочкой, все это делает возможным оптимизацию внутренних процессов в
-                            Компании.</p>
-                        <a class="btnOrange" href="#">подробнее</a>
-                    </div>
-                    <div class="tags__content">
-                        <div class="innerTitle">
-                            Модуль FI «Финансы»
+                        <div class="tags__content">
+                            <div class="innerTitle">
+                                Модуль FI «Финансы»
+                            </div>
+                            <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг
+                                и
+                                Финансовый менеджмент играет ключевую роль для управления всеми подразделениями,
+                                обеспечивая
+                                связь с логистической цепочкой, все это делает возможным оптимизацию внутренних
+                                процессов в
+                                Компании.</p>
+                            <a class="btnOrange" href="#">подробнее</a>
                         </div>
-                        <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг и
-                            Финансовый менеджмент играет ключевую роль для управления всеми подразделениями, обеспечивая
-                            связь с логистической цепочкой, все это делает возможным оптимизацию внутренних процессов в
-                            Компании.</p>
-                        <a class="btnOrange" href="#">подробнее</a>
-                    </div>
-                    <div class="tags__content">
-                        <div class="innerTitle">
-                            Модуль FI «Финансы»
+                        <div class="tags__content">
+                            <div class="innerTitle">
+                                Модуль FI «Финансы»
+                            </div>
+                            <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг
+                                и
+                                Финансовый менеджмент играет ключевую роль для управления всеми подразделениями,
+                                обеспечивая
+                                связь с логистической цепочкой, все это делает возможным оптимизацию внутренних
+                                процессов в
+                                Компании.</p>
+                            <a class="btnOrange" href="#">подробнее</a>
                         </div>
-                        <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг и
-                            Финансовый менеджмент играет ключевую роль для управления всеми подразделениями, обеспечивая
-                            связь с логистической цепочкой, все это делает возможным оптимизацию внутренних процессов в
-                            Компании.</p>
-                        <a class="btnOrange" href="#">подробнее</a>
-                    </div>
-                    <div class="tags__content">
-                        <div class="innerTitle">
-                            Модуль FI «Финансы»
+                        <div class="tags__content">
+                            <div class="innerTitle">
+                                Модуль FI «Финансы»
+                            </div>
+                            <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг
+                                и
+                                Финансовый менеджмент играет ключевую роль для управления всеми подразделениями,
+                                обеспечивая
+                                связь с логистической цепочкой, все это делает возможным оптимизацию внутренних
+                                процессов в
+                                Компании.</p>
+                            <a class="btnOrange" href="#">подробнее</a>
                         </div>
-                        <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг и
-                            Финансовый менеджмент играет ключевую роль для управления всеми подразделениями, обеспечивая
-                            связь с логистической цепочкой, все это делает возможным оптимизацию внутренних процессов в
-                            Компании.</p>
-                        <a class="btnOrange" href="#">подробнее</a>
-                    </div>
-                    <div class="tags__content">
-                        <div class="innerTitle">
-                            Модуль FI «Финансы»
+                        <div class="tags__content">
+                            <div class="innerTitle">
+                                Модуль FI «Финансы»
+                            </div>
+                            <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг
+                                и
+                                Финансовый менеджмент играет ключевую роль для управления всеми подразделениями,
+                                обеспечивая
+                                связь с логистической цепочкой, все это делает возможным оптимизацию внутренних
+                                процессов в
+                                Компании.</p>
+                            <a class="btnOrange" href="#">подробнее</a>
                         </div>
-                        <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг и
-                            Финансовый менеджмент играет ключевую роль для управления всеми подразделениями, обеспечивая
-                            связь с логистической цепочкой, все это делает возможным оптимизацию внутренних процессов в
-                            Компании.</p>
-                        <a class="btnOrange" href="#">подробнее</a>
-                    </div>
-                    <div class="tags__content">
-                        <div class="innerTitle">
-                            Модуль FI «Финансы»
+                        <div class="tags__content">
+                            <div class="innerTitle">
+                                Модуль FI «Финансы»
+                            </div>
+                            <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг
+                                и
+                                Финансовый менеджмент играет ключевую роль для управления всеми подразделениями,
+                                обеспечивая
+                                связь с логистической цепочкой, все это делает возможным оптимизацию внутренних
+                                процессов в
+                                Компании.</p>
+                            <a class="btnOrange" href="#">подробнее</a>
                         </div>
-                        <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг и
-                            Финансовый менеджмент играет ключевую роль для управления всеми подразделениями, обеспечивая
-                            связь с логистической цепочкой, все это делает возможным оптимизацию внутренних процессов в
-                            Компании.</p>
-                        <a class="btnOrange" href="#">подробнее</a>
-                    </div>
-                    <div class="tags__content">
-                        <div class="innerTitle">
-                            Модуль FI «Финансы»
+                        <div class="tags__content">
+                            <div class="innerTitle">
+                                Модуль FI «Финансы»
+                            </div>
+                            <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг
+                                и
+                                Финансовый менеджмент играет ключевую роль для управления всеми подразделениями,
+                                обеспечивая
+                                связь с логистической цепочкой, все это делает возможным оптимизацию внутренних
+                                процессов в
+                                Компании.</p>
+                            <a class="btnOrange" href="#">подробнее</a>
                         </div>
-                        <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг и
-                            Финансовый менеджмент играет ключевую роль для управления всеми подразделениями, обеспечивая
-                            связь с логистической цепочкой, все это делает возможным оптимизацию внутренних процессов в
-                            Компании.</p>
-                        <a class="btnOrange" href="#">подробнее</a>
-                    </div>
-                    <div class="tags__content">
-                        <div class="innerTitle">
-                            Модуль FI «Финансы»
-                        </div>
-                        <p>Модуль FI «Финансы» вместе с входящими в него составными частями Бухгалтерия, Контроллинг и
-                            Финансовый менеджмент играет ключевую роль для управления всеми подразделениями, обеспечивая
-                            связь с логистической цепочкой, все это делает возможным оптимизацию внутренних процессов в
-                            Компании.</p>
-                        <a class="btnOrange" href="#">подробнее</a>
                     </div>
                     <div class="solutions_left__desc">
                         <p>Модули SAP подключаются к единой платформе по мере необходимости c ростом и потребностями
@@ -406,6 +419,33 @@
                             ERP-системы работает независимо от других, он может быть подключен в любой момент
                             времени.</p>
                     </div>
+                </div>
+                <div class="solutions_right solutions_right_active">
+                    <img alt="cube" class="cubeAnimate" src="images/main/sap-cube.png">
+                </div>
+                <div class="solutions_right">
+                    <img alt="cube" class="cubeAnimate" src="images/main/sap-cube.png">
+                </div>
+                <div class="solutions_right">
+                    <img alt="cube" class="cubeAnimate" src="images/main/sap-cube.png">
+                </div>
+                <div class="solutions_right">
+                    <img alt="cube" class="cubeAnimate" src="images/main/sap-cube.png">
+                </div>
+                <div class="solutions_right">
+                    <img alt="cube" class="cubeAnimate" src="images/main/sap-cube.png">
+                </div>
+                <div class="solutions_right">
+                    <img alt="cube" class="cubeAnimate" src="images/main/sap-cube.png">
+                </div>
+                <div class="solutions_right">
+                    <img alt="cube" class="cubeAnimate" src="images/main/sap-cube.png">
+                </div>
+                <div class="solutions_right">
+                    <img alt="cube" class="cubeAnimate" src="images/main/sap-cube.png">
+                </div>
+                <div class="solutions_right">
+                    <img alt="cube" class="cubeAnimate" src="images/main/sap-cube.png">
                 </div>
                 <div class="solutions_right">
                     <img alt="cube" class="cubeAnimate" src="images/main/sap-cube.png">
@@ -599,8 +639,28 @@
     </div>
 </footer>
 
+<div id="callback-modal" class="modal modal-default">
+    <div class="modal-default__title">Заказать обратный звонок</div>
+
+    <form class="callback-form default-form" id="formZvonok">
+        <div class="default-form__group">
+            <input type="text" name="name" class="default-form__input" placeholder="Введите ваше имя" required>
+        </div>
+        <div class="default-form__group">
+            <input type="text" name="tel" class="default-form__input" placeholder="+7 ___ - ___ -__ - __" required>
+        </div>
+        <div class="default-form__group">
+            <input type="hidden" name="form_subject" value="Модальная форма - заказать обратный звонок">
+            <button type="submit" class="default-form__submit default-form__submit--full">Отправить</button>
+        </div>
+    </form>
+
+    <div class="modal__personaldata">Согласен(а) на обработку <a href="#">персональных данных</a></div>
+
+</div>
 
 <script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
 <script src="js/gsap.min.js"></script>
 <script src="js/hamburger.js"></script>
 <script src="js/main.js"></script>

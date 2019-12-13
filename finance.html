@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>финансы</title>
+    <title>главная</title>
     <meta content="" name="description"/>
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -11,6 +11,7 @@
 
     <link href="css/fonts.css" rel="stylesheet">
     <link href="fontawesome/css/all.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
     <link href="css/min-reset.css" rel="stylesheet">
     <link href="css/hamburger.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -38,10 +39,10 @@
             </nav>
             <div class="header__contacts">
                 <div class="header__phone">
-                    <span>+7 (812)</span> 602-18-82
+                    <a href="#"><span>+7 (812)</span> 602-18-82</a>
                 </div>
                 <div class="callback">
-                    <a href="#">Заказать звонок</a>
+                    <a href="#callback-modal" data-fancybox-modal>Заказать звонок</a>
                 </div>
             </div>
             <div class="header__hamburger">
@@ -344,12 +345,34 @@
     </div>
 </footer>
 
+<div id="callback-modal" class="modal modal-default">
+    <div class="modal-default__title">Заказать обратный звонок</div>
+
+    <form class="callback-form default-form" id="formZvonok">
+        <div class="default-form__group">
+            <input type="text" name="name" class="default-form__input" placeholder="Введите ваше имя" required>
+        </div>
+        <div class="default-form__group">
+            <input type="text" name="tel" class="default-form__input" placeholder="+7 ___ - ___ -__ - __" required>
+        </div>
+        <div class="default-form__group">
+            <input type="hidden" name="form_subject" value="Модальная форма - заказать обратный звонок">
+            <button type="submit" class="default-form__submit default-form__submit--full">Отправить</button>
+        </div>
+    </form>
+
+    <div class="modal__personaldata">Согласен(а) на обработку <a href="#">персональных данных</a></div>
+
+</div>
 
 <script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
 <script src="js/gsap.min.js"></script>
 <script src="js/hamburger.js"></script>
 <script src="js/main.js"></script>
 
 </body>
+
+</html>
 
 </html>
